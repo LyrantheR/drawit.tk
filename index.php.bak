@@ -1,0 +1,20 @@
+<head>
+                <link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<canvas width="1280" height="720" id="canvas"></canvas>
+<script>
+document.addEventListener("click", printMousePos);
+function printMousePos(event) {
+let canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+    var rect = canvas.getBoundingClientRect();
+    var x = event.clientX - rect.left;
+    var y = event.clientY - rect.top;
+ctx.fillRect(x - 10, y - 10, 20, 20);
+}
+
+</script>
+</body>
